@@ -43,4 +43,16 @@ export default class Board {
             this.currentPlayer = (this.currentPlayer === Player.WHITE ? Player.BLACK : Player.WHITE);
         }
     }
+
+    moveLaterally(dir) {
+        let location = board.findPiece(this)
+        let availableMoves = [];
+        let boardLength = GameSettings.BOARD_SIZE;
+        for (let i = 0; i < boardLength; i++) {
+            if (i !== location.dir) {
+            availableMoves.push(Square.at(location.dir, i));
+            }
+        }
+        return availableMoves;
+    }
 }
