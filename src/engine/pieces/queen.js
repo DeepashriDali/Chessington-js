@@ -6,11 +6,13 @@ export default class Queen extends LineMover {
         super(player);
     }
     getAvailableMoves(board){
-        return super.getLinearMoves(board) 
+
+      let lin = super.getLinearMoves(board) ;
+      let dia = super.getDiagonalMoves(board) ;
+      let queenMoves = lin.concat(dia);
+        return queenMoves
     }
-    getAvailableMoves(board){
-      return super.getDiagonalMoves(board);
-    }
+
   
 }
 
