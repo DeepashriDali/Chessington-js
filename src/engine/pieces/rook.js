@@ -12,6 +12,7 @@ export default class Rook extends Piece {
         let location = board.findPiece(this)
         let availableMoves = [];
         let boardLength = GameSettings.BOARD_SIZE;
+        //change to function or forEach
         for (let i = 0; i < boardLength; i++) {
             if (i !== location.col) {
             availableMoves.push(Square.at(location.row, i));
