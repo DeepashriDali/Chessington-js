@@ -16,11 +16,11 @@ describe('Bishop', () => {
         const moves = bishop.getAvailableMoves(board);
 
         const expectedMoves = [
-        // Bottom Left
+        // // Bottom Left
         Square.at(0, 1), 
-        // Bottom Right
+        // // Bottom Right
         Square.at(0, 3), 
-        // Top Left
+        //Top Left
         Square.at(2, 1), Square.at(3, 0),
         // Top Right
         Square.at(2, 3), Square.at(3, 4), Square.at(4, 5), Square.at(5, 6), Square.at(6, 7)
