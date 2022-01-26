@@ -12,3 +12,4 @@ export default class Queen extends Rook, Bishop {
 
     
 }
+
