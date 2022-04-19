@@ -8,17 +8,16 @@ export default class King extends Piece {
 
     getAvailableMoves(board) {
         let location = board.findPiece(this)
-        let availableMoves = [];
-      
-            availableMoves.push(Square.at(location.row + 1, location.col));
-            availableMoves.push(Square.at(location.row - 1, location.col));
-            availableMoves.push(Square.at(location.row , location.col +1));
-            availableMoves.push(Square.at(location.row , location.col-1));
-            availableMoves.push(Square.at(location.row + 1, location.col+1));
-            availableMoves.push(Square.at(location.row + 1, location.col-1));
-            availableMoves.push(Square.at(location.row - 1, location.col+1));
-            availableMoves.push(Square.at(location.row - 1, location.col-1));
-
+        let availableMoves = [
+            Square.at(location.row + 1, location.col),
+            Square.at(location.row - 1, location.col),
+            Square.at(location.row , location.col +1),
+            Square.at(location.row , location.col-1),
+            Square.at(location.row + 1, location.col+1),
+            Square.at(location.row + 1, location.col-1),
+            Square.at(location.row - 1, location.col+1),
+            Square.at(location.row - 1, location.col-1)
+        ];
       return availableMoves;  
     }
     }
